@@ -20,6 +20,7 @@ export class HomePage {
     const alert = await this.alertController.create({
       cssClass:'my-custom-class',
       header:'Adicionar Tarefa!',
+
       inputs:[
         {
           name:'nomeTarefa',
@@ -36,7 +37,7 @@ export class HomePage {
           type:'date',
           min:'2024-09-01',  // Corrigido o formato da data
           max:'2025-09-01',
-          placeholder:'Data da tarefa'
+          placeholder:'Data da tarefa',
         },
       ],
       buttons: [

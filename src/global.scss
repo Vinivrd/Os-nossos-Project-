@@ -39,3 +39,11 @@
 ion-app {
     --background: #ffffff; /* Fundo branco */
 }
+
+ion-alert {
+    ::ng-deep .alert-input {
+      color: red; /* Change this color to your desired color */
+    }
+}
+
+// https://stackoverflow.com/questions/69752956/ion-input-of-type-date-has-calendar-icon-of-the-wrong-color
