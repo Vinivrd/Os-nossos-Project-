@@ -18,7 +18,7 @@ export class HomePage {
   //Alert do ionic doc
   async presentAlertPromptAdd(){
     const alert = await this.alertController.create({
-      cssClass:'my-custom-class',
+      cssClass: 'custom-alert',
       header:'Adicionar Tarefa!',
       inputs:[
         {
@@ -65,12 +65,13 @@ export class HomePage {
     console.log(task);
     const alert = await this.alertController.create({
       header:'Atualizar Tarefa!',
+      cssClass: 'custom-alert',
       inputs:[
         {
           name:'nomeTarefa',
           type:'text',
           placeholder:'Nome da tarefa',
-          value:task.nome
+          value:task.nome,
         },
         {
           name:'description',
@@ -116,25 +117,13 @@ export class HomePage {
   }
 
   async presentAlertPromptDelete(index:number){
-    const alert = await this.alertController.create({
-      header:'Excluir Tarefa!',
-      message:'Deseja realmente excluir a tarefa',
-
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-        },
-        {
-          text: 'Excluir',
-          handler: (alertData) => {
-            this.taskService.delTask(index)
-          }
-        },
-      ]
-    });
-
-    await alert.present();  // Adicionado para apresentar o alerta
+    // Função para criar um atraso
+    const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+  
+    await delay(500);
+  
+    this.taskService.delTask(index);
+    
   }
 
 

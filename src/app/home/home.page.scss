@@ -31,5 +31,101 @@ ion-list{
 .tres_pontinhos{
   color:#dc4c3e;
 }
+ion-content {
+  --background: #ffffff; /* Fundo branco */
+  color: #000000; /* Cor do texto preta */
+}
 
-ion-checkbox
+ion-item {
+  --background: #ffffff; /* Fundo branco */
+  color: #000000; /* Cor do texto preta */
+}
+
+ion-label {
+  color: #000000; /* Cor do texto preta */
+}
+
+ion-badge {
+  --background: #ffd700; /* Cor de fundo do badge, por exemplo, amarelo */
+  color: #000000; /* Cor do texto do badge preta */
+}
+
+ion-fab-button {
+  --background: #dc4c3e; /* Cor de fundo do botão de FAB */
+  color: #ffffff; /* Cor do ícone do botão de FAB */
+}
+
+ion-icon {
+  color: #000000; /* Cor do ícone preta */
+}
+
+ion-item-option {
+  color: #000000; /* Cor do texto das opções do item */
+}
+
+ion-item-option[color="warning"] {
+  --color: #000000; /* Cor preta para o texto da opção de aviso */
+}
+
+ion-item-option[color="danger"] {
+  --color: #000000; /* Cor preta para o texto da opção de perigo */
+}
+
+ion-checkbox {
+  
+  --background: #ffffff;
+  --border-radius: 50%; /* Torna o checkbox redondo */
+  --border-color:#454545; /* Cor da borda */
+  --size: 24px; /* Tamanho do checkbox */
+  --border-color-checked:#454545; 
+  --border-width:1px;
+  --checkbox-background:#ffffff;
+  --checkbox-background-checked: #454545;
+  --checkmark-color:#ffffff;
+  --checkmark-width: 2px;
+}
+
+ion-checkbox .checkbox-inner {
+  border-radius: 50%; /* Torna o interior redondo */
+}
+
+ion-checkbox .checkbox-checkmark {
+  border-radius: 50%; /* Torna o checkmark redondo */
+
+}
+
+ion-checkbox .checkbox-icon {
+  color: #dc4c3e; /* Cor do ícone de checkmark */
+}
+
+ion-badge {
+  --background: #ffffff; 
+  color:#bdb5b3 ;
+}
+
+ion-content h1{
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+
+//css do form
+.custom-alert .alert-wrapper {
+  --background: #e5e5e5; /* Cor de fundo do alerta */
+}
+
+.custom-alert .alert-title {
+  --color: #ff0000; /* Cor do texto do título */
+}
+
+.custom-alert .alert-message {
+  color: #ff0000; /* Cor do texto da mensagem */
+}
+
+.custom-alert .alert-input {
+  background-color: #f0f0f0; /* Cor de fundo dos campos de input */
+}
+
+.custom-alert .alert-button {
+  color: #007bff; /* Cor dos botões */
+}
