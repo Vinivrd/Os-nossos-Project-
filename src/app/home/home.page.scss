@@ -1,33 +1,35 @@
 
-#container {
-  text-align: center;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
 
 .button-add{
   --background: #dc4c3e;
   --color: white;
 }
+
+ion-content {
+  --background: #ffffff; /* Fundo branco */
+}
+
+ion-header {
+  --background: #ffffff; /* Fundo branco para o cabeçalho */
+}
+
+ion-toolbar {
+  --background: #ffffff;
+  display: flex; /* Fundo branco para a barra de ferramentas */
+}
+
+ion-title {
+  color: #000000; /* Cor do texto preto para contraste */
+}
+
+ion-list{
+  --background: #ffffff;
+  background: none;
+}
+
+.tres_pontinhos{
+  color:#dc4c3e;
+}
+
+ion-checkbox

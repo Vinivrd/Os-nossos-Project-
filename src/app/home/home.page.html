@@ -1,19 +1,37 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="ellipsis-vertical-outline" class="tres_pontinhos"></ion-icon> <!-- Ícone de três pontos -->
+      </ion-button>
+    </ion-buttons>
     <ion-title class="ion-text-center">Hoje</ion-title>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Hoje</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h1>Hoje</h1>
+  <ion-list>
+    <ion-item-sliding *ngFor="let task of taskService.getTasks(); let i = index">
+      <ion-item>
+        <ion-label>{{task.nome}}</ion-label>
+        <ion-checkbox slot="start" [(ngModel)]="task.done"></ion-checkbox>
+        <ion-badge color="warning" *ngIf="task.date">
+          {{task.date.getDate() + "/" + (task.date.getMonth() + 1) + "/" + task.date.getFullYear()}}
+        </ion-badge>
+      </ion-item>
+
+      <ion-item-options>
+        <ion-item-option color="warning" (click)="presentAlertPromptUpdate(i, task)">Editar</ion-item-option>
+        <ion-item-option color="danger" (click)="presentAlertPromptDelete(i)">Deletar</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button class="button-add" (click)='presentAlertPromptAdd()'>
-      <ion-icon name="add"></ion-icon>
+    <ion-fab-button class="button-add" (click)="presentAlertPromptAdd()">
+      <ion-icon name="add" aria-label="Adicionar"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 </ion-content>

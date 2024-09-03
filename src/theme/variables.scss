@@ -1,2 +1,33 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+/* Set variables for all modes */
+:root {
+    /* Set the background of the entire app */
+    --ion-background-color: #ffffff; /* Branco */
+  
+    /* Set the font family of the entire app */
+    --ion-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', sans-serif;
+  
+    /* Set the text color for the entire app */
+    --ion-text-color: #000000; /* Preto */
+}
+
+/* Set specific colors for iOS */
+:root.ios {
+    --ion-text-color: #000000; /* Preto */
+}
+
+/* Set specific colors for Material Design */
+:root.md {
+    --ion-text-color: #000000; /* Preto */
+}
+
+ion-title {
+    color: #000000; /* Preto */
+}
+
+ion-content {
+    --background: #ffffff; /* Branco */
+    --color: #000000; /* Preto */
+}
+ion-list{
+    --background: #ffffff
+}
