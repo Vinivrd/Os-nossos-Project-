@@ -18,7 +18,7 @@ export class HomePage {
   //Alert do ionic doc
   async presentAlertPromptAdd(){
     const alert = await this.alertController.create({
-      cssClass: 'custom-alert',
+      cssClass:'my-custom-class',
       header:'Adicionar Tarefa!',
       inputs:[
         {
