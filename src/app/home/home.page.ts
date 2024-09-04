@@ -91,7 +91,6 @@ export class HomePage {
               "-" +
             (task.date.getDate() < 10 ? '0' + task.date.getDate() : task.date.getDate())
 
-
         },
       ],
       buttons: [
